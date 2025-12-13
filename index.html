@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Site</title>
+  <meta charset="UTF-8">
+  <title>Meu Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Meu site está no ar 🚀</h1>
-<p>Conteúdo carregado do JSON:</p>
+  <div class="container">
+    <h1>Meu site está no ar 🚀</h1>
+    <p>Este site foi criado gratuitamente pelo GitHub Pages.</p>
+    <p>Agora você pode evoluir ele como quiser.</p>
 
-<pre id="dados"></pre>
-
-<script>
-fetch('dados.json')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('dados').textContent = JSON.stringify(data, null, 2);
-  });
-</script>
+    <button onclick="alert('Botão funcionando!')">
+      Clique aqui
+    </button>
+  </div>
 
 </body>
 </html>
