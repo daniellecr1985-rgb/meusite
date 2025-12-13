@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site</title>
+</head>
+<body>
+
+<h1>Meu site está no ar 🚀</h1>
+<p>Conteúdo carregado do JSON:</p>
+
+<pre id="dados"></pre>
+
+<script>
+fetch('dados.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('dados').textContent = JSON.stringify(data, null, 2);
+  });
+</script>
+
+</body>
+</html>
